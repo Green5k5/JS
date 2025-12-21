@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+
+    <link rel="stylesheet" href="styles/avatar.css" />
+    <link rel="stylesheet" href="styles/personalInfo.css" />
+    <link rel="stylesheet" href="styles/languagesInfo.css" />
+    <link rel="stylesheet" href="styles/experienceInfo.css" />
+    <link rel="stylesheet" href="styles/toolsInfo.css" />
+    <link rel="stylesheet" href="styles/educationInfo.css" />
+    <link rel="stylesheet" href="styles/interestsInfo.css" />
+    <link rel="stylesheet" href="styles/contactInfo.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <div class="resume">
+        <!-- BLOCK 1 -->
+        <section class="block-1">
+          <article class="avatar-container card">
+            <img
+              src="./assets/images/profileImg.png"
+              alt="Profile picture"
+              class="avatar"
+            />
+          </article>
+
+          <article class="personal-info card">
+            <p class="personal-info__header-text">Hello 👋 I’m</p>
+            <div class="personal-info__container">
+              <p class="personal-info__name">Karthik SR</p>
+              <p class="personal-info__specialty">UX/UI Designer</p>
+            </div>
+          </article>
+
+          <article class="languages-info card">
+            <h3 class="header-text">Languages</h3>
+
+            <div class="languages-info__container">
+              <div class="languages-info__item">
+                <p class="languages-info__name">English</p>
+                <div class="languages-info__progress" style="--progress: 100%"></div>
+              </div>
+
+              <div class="languages-info__item">
+                <p class="languages-info__name">Malayalam</p>
+                <div class="languages-info__progress" style="--progress: 100%"></div>
+              </div>
+
+              <div class="languages-info__item">
+                <p class="languages-info__name">Hindi</p>
+                <div class="languages-info__progress" style="--progress: 78%"></div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- BLOCK 2 -->
+        <section class="block-2">
+          <article class="experience-info card">
+            <h3 class="header-text">Experience</h3>
+
+            <div class="experience-info__list">
+              <!-- ITEM 1 -->
+              <div class="experience-info__list-item selected">
+                <div class="experience-info__header">
+                  <span class="experience-info__period">Jun. 2023 – Present</span>
+                  <span class="experience-info__label">most recent</span>
+                </div>
+
+                <div class="experience-info__content">
+                  <div class="experience-info__job">
+                    <div class="experience-info__job-specialty">Marketing Manager</div>
+                    <div class="experience-info__job-bottom">
+                      <span class="experience-info__job-name">Pankayam</span>
+                      <span class="experience-info__divider">|</span>
+                      <span class="experience-info__job-time">Full-time</span>
+                    </div>
+                  </div>
+
+                  <ul class="experience-info__responsibility-list">
+                    <li class="experience-info__responsibility-list-item">
+                      Strategy development and planning of campaigns that promote the business and generate genuine traffic
+                    </li>
+                    <li class="experience-info__responsibility-list-item">
+                      SEO Content Creation for Blogs, Website, Social media
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- ITEM 2 -->
+              <div class="experience-info__list-item">
+                <div class="experience-info__header">
+                  <span class="experience-info__period">2017 – Present</span>
+                </div>
+
+                <div class="experience-info__content">
+                  <div class="experience-info__job">
+                    <div class="experience-info__job-specialty">Graphic / Web designer</div>
+                    <div class="experience-info__job-bottom">
+                      <span class="experience-info__job-name">Freelance</span>
+                    </div>
+                  </div>
+
+                  <ul class="experience-info__responsibility-list">
+                    <li class="experience-info__responsibility-list-item">
+                      Development of internal projects from scratch, product design of brands
+                    </li>
+                    <li class="experience-info__responsibility-list-item">
+                      Landing page, webapps and hybrid apps
+                    </li>
+                    <li class="experience-info__responsibility-list-item">
+                      Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- ITEM 3 -->
+              <div class="experience-info__list-item">
+                <div class="experience-info__header">
+                  <span class="experience-info__period">Sep. 2021 – Jun. 2023</span>
+                </div>
+
+                <div class="experience-info__content">
+                  <div class="experience-info__job">
+                    <div class="experience-info__job-specialty">Legal Assistant</div>
+                    <div class="experience-info__job-bottom">
+                      <span class="experience-info__job-name">Law Firm</span>
+                      <span class="experience-info__divider">|</span>
+                      <span class="experience-info__job-time">Intern</span>
+                    </div>
+                  </div>
+
+                  <ul class="experience-info__responsibility-list">
+                    <li class="experience-info__responsibility-list-item">
+                      Provide administrative support to lawyer and enhance office effectiveness
+                    </li>
+                    <li class="experience-info__responsibility-list-item">
+                      Handle communication with clients, witnesses etc.
+                    </li>
+                    <li class="experience-info__responsibility-list-item">
+                      Prepare case briefs and summarize depositions, interrogatories and testimony
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tools-info card">
+            <h3 class="header-text">Tools</h3>
+
+            <div class="tools-info__list">
+              <!-- DESIGN -->
+              <div class="tools-info__list-item">
+                <span class="tools-info__label">design</span>
+                <div class="tools-info__tools-list">
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/figma.png" alt="Figma" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/photoshop.svg" alt="Photoshop" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/illustrator.svg" alt="Illustrator" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/premiere.svg" alt="Premiere Pro" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/notion.svg" alt="Notion" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/meet.svg" alt="Google Meet" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- NO-CODE -->
+              <div class="tools-info__list-item">
+                <span class="tools-info__label">no-code</span>
+                <div class="tools-info__tools-list">
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/logozapier.svg" alt="logozapier" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/webflow.svg" alt="Webflow" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/wordpress.svg" alt="WordPress" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/logoframer.svg" alt="logoframer" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- AI -->
+              <div class="tools-info__list-item">
+                <span class="tools-info__label">artificial intelligence</span>
+                <div class="tools-info__tools-list">
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/openai.svg" alt="ChatGPT" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/midjourney.svg" alt="Midjourney" />
+                  </div>
+                  <div class="tools-info__tools-list-item">
+                    <img class="tools-info__icon" src="./assets/images/microsoft.svg" alt="Microsoft" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- BLOCK 3 -->
+        <section class="block-3">
+          <article class="education-info card">
+            <h3 class="header-text">Education</h3>
+            <div class="education-info__grid">
+              <div class="education-info__row">
+                <div class="education-info__item education-info__item--sm selected">
+                  <div class="education-info__top">
+                    <span class="education-info__year">2023</span>
+                    <span class="education-info__heart">💛</span>
+                  </div>
+
+                  <div class="education-info__title">UI/UX</div>
+
+                  <div class="education-info__tags">
+                    <span>#UX</span>
+                    <span>#UI</span>
+                    <span>#research</span>
+                    <span>#DesignSystem</span>
+                    <span>#Ui</span>
+                    <span>#wireframing</span>
+                    <span>#figma</span>
+                    <span>#Ux</span>
+                  </div>
+
+                  <div class="education-info__place">Coursera</div>
+                </div>
+
+                <div class="education-info__item education-info__item--sm">
+                  <div class="education-info__top">
+                    <span class="education-info__year-range">2017 – 2022</span>
+                    <span></span>
+                  </div>
+
+                  <div class="education-info__title">Law</div>
+
+                  <div class="education-info__tags">
+                    <span>#law</span>
+                    <span>#legalStudies</span>
+                    <span>#contracts</span>
+                    <span>#internationalLaws</span>
+                  </div>
+
+                  <div class="education-info__place">University of Kerala</div>
+                </div>
+              </div>
+
+              <div class="education-info__item education-info__item--wide">
+                <div class="education-info__top">
+                  <span class="education-info__year-range">2017</span>
+                  <span></span>
+                </div>
+
+                <div class="education-info__title">Graphic design</div>
+
+                <div class="education-info__tags">
+                  <span>#branding</span>
+                  <span>#web</span>
+                  <span>#illustration</span>
+                  <span>#adobe</span>
+                </div>
+
+                <div class="education-info__place">Coursera</div>
+              </div>
+            </div>
+        </article>
+
+          <div class="right-column">
+            <article class="interests-info card">
+              <h3 class="header-text">Interests</h3>
+
+              <div class="interests-info__list">
+                <span class="interests-info__chip">branding</span>
+                <span class="interests-info__chip">design</span>
+                <span class="interests-info__chip">photography</span>
+                <span class="interests-info__chip">artificial intelligence</span>
+                <span class="interests-info__chip">illustration</span>
+                <span class="interests-info__chip">typography</span>
+                <span class="interests-info__chip">social networks</span>
+                <span class="interests-info__chip">research</span>
+                <span class="interests-info__chip">dron pilot</span>
+                <span class="interests-info__chip">games</span>
+              </div>
+            </article>
+
+            <article class="contact-info card">
+              <div class="contact-info__title">
+                Let’s chat! I’m ready to work on exciting projects
+              </div>
+              <a class="contact-info__email" href="mailto:srkarthik.designscape@gmail.com">
+                srkarthik.designscape@gmail.com
+              </a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

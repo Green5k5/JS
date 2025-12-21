@@ -1,0 +1,53 @@
+.interests-info {
+  padding: 12px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 16px;
+
+  width: 267px;
+  height: 177px;
+}
+
+.interests-info .header-text {
+  margin: 0;
+}
+
+.interests-info__list {
+  width: 243px;
+  height: 116px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  align-items: flex-start;
+  align-content: flex-start;
+
+  overflow: hidden;
+}
+
+.interests-info__chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px 10px;
+  height: 23px;
+  background: #ffffff;
+  border-radius: 40px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  color: #000000;
+  white-space: nowrap;
+}

@@ -1,0 +1,119 @@
+.experience-info {
+  padding: 12px;
+  height: auto;       
+  align-self: start;
+}
+
+.experience-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-info__list-item {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+}
+
+.experience-info__list-item.selected {
+  height: 76px;
+  color: #fff;
+  background: #28d979;
+}
+
+.experience-info__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.experience-info__period {
+  font-size: 8px;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.experience-info__label {
+  color: #DDF163;
+  background: #7E731266;
+  height: 16px;
+  line-height: 155%;
+  font-size: 8px;
+  padding-top: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 59px;
+  font-weight: 600;
+}
+
+.experience-info__content {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 8px;
+}
+
+.experience-info__job {
+  width: 124px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.experience-info__job-specialty {
+  font-size: 10px;
+  line-height: 150%;
+  font-weight: 500;
+  margin: -2px 0 0;
+}
+
+.experience-info__job-bottom {
+  display: flex;
+  align-items: center;
+  font-size: 8px;
+  line-height: 150%;
+}
+
+.experience-info__divider {
+  opacity: 0.7;
+}
+
+.experience-info__list-item.selected .experience-info__job-bottom {
+  color: #ebf9f2;
+}
+
+.experience-info__job-name,
+.experience-info__job-time {
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.experience-info__responsibility-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 239px;
+  overflow: hidden;
+  gap: 6px;
+}
+
+.experience-info__responsibility-list-item {
+  position: relative;
+  padding-left: 14px;
+  font-size: 8px;
+  line-height: 150%;
+  overflow: hidden;
+}
+
+.experience-info__responsibility-list-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
