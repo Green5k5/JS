@@ -1,0 +1,126 @@
+body,
+p {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: 400;
+    src: url(./fonts/InterRegular.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    font-weight: bold;
+    src: url(./fonts/InterBold.ttf);
+}
+
+html {
+    font-family: Inter;
+}
+
+.container {
+    background: #6600FF;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #FFFFFF;
+    height: 530px;
+    width: 380px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.location-bar {
+    height: 44px;
+    display: flex;
+    gap: 12px;
+}
+
+.location-input {
+    flex-grow: 1;
+    height: 44px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+}
+
+.location-button {
+    height: 44px;
+    width: 44px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.location-icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.current-weather-icon {
+    height: 220px;
+}
+
+.current-weather-temperature {
+    font-size: 45px;
+}
+
+.current-weather-status {
+    font-size: 25px;
+}
+
+.forecast {
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+    padding-bottom: 6px;
+}
+
+.forecast-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 56px;
+}
+
+.forecast-time {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.forecast-icon {
+    width: 28px;
+    height: 28px;
+    margin: 6px 0;
+}
+
+.forecast-temperature {
+    font-size: 14px;
+}
