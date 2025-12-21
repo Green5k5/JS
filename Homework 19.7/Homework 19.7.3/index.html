@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Список доставок</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container"></div>
+
+  <div class="controls">
+    <button id="totalBtn" class="btn btn--primary">Общее расстояние</button>
+    <div id="totalOut" class="total"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal__window">
+      <div class="modal__header">
+        <h2 class="modal__title">Редактирование доставки</h2>
+        <button id="modalClose" class="btn btn--small" type="button">✕</button>
+      </div>
+
+      <form id="editForm" class="form">
+        <label class="field">
+          <span>Имя</span>
+          <input id="nameInput" type="text" />
+        </label>
+
+        <label class="field">
+          <span>Адрес</span>
+          <input id="addressInput" type="text" />
+        </label>
+
+        <label class="field">
+          <span>Расстояние</span>
+          <input id="distanceInput" type="text" inputmode="numeric" />
+        </label>
+
+        <label class="field">
+          <span>Статус</span>
+          <select id="statusSelect">
+            <option value="delivering">Доставляется</option>
+            <option value="delivered">Доставлен</option>
+            <option value="canceled">Отменён</option>
+          </select>
+        </label>
+
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">Сохранить</button>
+          <button class="btn" type="button" id="cancelBtn" onclick="document.querySelector('#modal').classList.remove('modal--open')">
+            Отмена
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

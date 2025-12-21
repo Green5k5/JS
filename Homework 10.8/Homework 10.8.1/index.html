@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Мини-Галерея</title>
+    <style>
+        .thumbnails img {
+            width: 100px;
+            cursor: pointer;
+        }
+        #full-image {
+            display: block;
+            width: 400px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мини-Галерея</h1>
+    <div class="thumbnails">
+        <img src="https://i.pinimg.com/originals/58/60/8f/58608f88b48b85b03bd431705238e946.jpg" alt="Thumbnail 1">
+        <img src="https://avatars.mds.yandex.net/i?id=80a15f412ba6e042b4cacadcb09504d8_l-10727636-images-thumbs&n=13" alt="Thumbnail 2">
+        <img src="https://content.onliner.by/news/2016/01/original_size/d5a60f6949bf3da479865fddf1f7e778.jpg" alt="Thumbnail 3">
+    </div>
+    <img id="full-image" src="" alt="Full Image">
+
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnails img');
+        const fullImage = document.getElementById('full-image');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                fullImage.src = thumbnail.src;
+            });
+        });
+    </script>
+</body>
+</html>

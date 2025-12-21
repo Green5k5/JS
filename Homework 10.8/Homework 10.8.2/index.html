@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Динамическая таблица</title>
+    <style>
+        button {
+            padding: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Динамическое управление списком</h1>
+    <button id="add-element">Добавить элемент</button>
+    <button id="remove-last">Удалить последний элемент</button>
+    <ul id="list-items"></ul>
+
+    <script>
+        const addButton = document.getElementById('add-element');
+        const removeButton = document.getElementById('remove-last');
+        const listItems = document.getElementById('list-items');
+
+        addButton.addEventListener('click', () => {
+            const newItem = document.createElement('li');
+            newItem.textContent = 'Новый элемент списка';
+            listItems.appendChild(newItem);
+        });
+
+        removeButton.addEventListener('click', () => {
+            if(listItems.children.length > 0) {
+                listItems.removeChild(listItems.lastElementChild);
+            }
+        });
+    </script>
+</body>
+</html>

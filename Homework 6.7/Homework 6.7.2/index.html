@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск минимум-максимум</title>
+</head>
+<body>
+    <h1>Поиск минимального и максимального числа</h1>
+    <p class="all-elements"></p>
+    <button class="min">Найти минимальное число</button>
+    <button class="max">Найти максимальное число</button>
+    <p>Минимальное число: <span class="minNumber"></span></p>
+    <p>Максимальное число: <span class="maxNumber"></span></p>
+
+    <script>
+    
+        const numbers = [5, 12, 8, 3, 20];
+
+        const allElementsEl = document.querySelector(".all-elements");
+
+      
+        let elementsString = "";
+        for(let i = 0; i < numbers.length; i++) {
+            if(i > 0) elementsString += ", ";
+            elementsString += numbers[i];  
+        }
+        allElementsEl.textContent = elementsString; 
+
+ 
+        const btnMin = document.querySelector(".min");
+        const btnMax = document.querySelector(".max");
+
+    
+        const minResult = document.querySelector(".minNumber");
+        const maxResult = document.querySelector(".maxNumber");
+
+    
+        btnMin.onclick = () => {
+            let minValue = Infinity;
+            for(let num of numbers) {  
+                if(num < minValue) minValue = num; 
+            }
+            minResult.textContent = minValue;     
+        };
+
+
+        btnMax.onclick = () => {
+            let maxValue = -Infinity;
+            for(let num of numbers) {     
+                if(num > maxValue) maxValue = num;
+            }
+            maxResult.textContent = maxValue;     
+        }
+    </script>
+</body>
+</html>

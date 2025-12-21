@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обратная связь</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .form-error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form id="feedback-form">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" required><br>
+        <label for="email">Адрес Email:</label>
+        <input type="email" id="email" required><br>
+        <label>Ваш пол:</label>
+        <input type="radio" name="gender" value="male"> Мужской<br>
+        <input type="radio" name="gender" value="female"> Женский<br>
+        <label for="rating">Оценка сервиса:</label>
+        <input type="range" id="rating" min="1" max="10"><br>
+        <label>Какие ваши интересы?</label>
+        <input type="checkbox" name="interests" value="sport"> Спорт<br>
+        <input type="checkbox" name="interests" value="music"> Музыка<br>
+        <input type="checkbox" name="interests" value="traveling"> Путешествия<br>
+        <input type="checkbox" name="interests" value="cinema"> Кино<br>
+        <textarea placeholder="Комментарии"></textarea><br>
+        <button type="submit">Отправить</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        const form = document.getElementById('feedback-form');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            const nameInput = document.getElementById('name').value.trim();
+            const emailInput = document.getElementById('email').value.trim();
+            const genderRadio = document.querySelector('input[name="gender"]:checked');
+            const ratingSlider = document.getElementById('rating').value;
+            const interestsCheckboxes = document.querySelectorAll('input[name="interests"]:checked');
+            const commentsArea = document.querySelector('textarea').value.trim();
+
+            if (!nameInput || !emailInput) {
+                resultDiv.textContent = 'Ошибка: Имя и Email обязательны.';
+                return;
+            }
+
+            if (!validateEmail(emailInput)) {
+                resultDiv.textContent = 'Ошибка: Неверный формат Email.';
+                return;
+            }
+
+            const userData = `
+                Имя: ${nameInput}<br>
+                Email: ${emailInput}<br>
+                Пол: ${genderRadio ? genderRadio.value : ''}<br>
+                Оценка сервиса: ${ratingSlider}/10<br>
+                Интересы: ${Array.from(interestsCheckboxes).map(cb => cb.value).join(', ') || 'Нет'}<br>
+                Комментарии: ${commentsArea || 'Нет'}
+            `;
+
+            resultDiv.innerHTML = userData;
+        });
+
+        function validateEmail(email) {
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+    </script>
+</body>
+</html>

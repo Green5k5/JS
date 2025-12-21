@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Интерактивная сортировка цен</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            border-bottom: 1px solid gray;
+            padding: 10px;
+        }
+        button {
+            padding: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Цены товаров</h1>
+    <ul id="prices-list"></ul>
+    <button id="sort-up">Сортировать по возрастанию</button>
+    <button id="sort-down">Сортировать по убыванию</button>
+
+    <script>
+        const pricesArray = [100, 500, 250, 750, 300];
+        const pricesList = document.getElementById('prices-list');
+        const sortUpButton = document.getElementById('sort-up');
+        const sortDownButton = document.getElementById('sort-down');
+
+        function renderPrices(prices) {
+            pricesList.innerHTML = ''; 
+            prices.forEach(price => {
+                const li = document.createElement('li');
+                li.textContent = `$${price}`;
+                pricesList.appendChild(li);
+            });
+        }
+
+        renderPrices(pricesArray);
+
+        sortUpButton.addEventListener('click', () => {
+            pricesArray.sort((a, b) => a - b); 
+        });
+
+        sortDownButton.addEventListener('click', () => {
+            pricesArray.sort((a, b) => b - a); 
+            renderPrices(pricesArray);
+        });
+    </script>
+</body>
+</html>

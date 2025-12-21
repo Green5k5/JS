@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#books-container {
+    margin-top: 20px;
+}
+
+.book-found {
+    background-color: yellow;
+}
